@@ -14,8 +14,8 @@ class Fraction:
         self.num = numerator
         self.den = denominator
 
-    def show_result(self):
-        print(self.num, "/", self.den)
+    def __str__(self):
+        return str(self.num) + " / " + str(self.den)
 
     def __add__(self, other_fraction):
         new_num = self.num * other_fraction.den + self.den * other_fraction.num
@@ -45,4 +45,4 @@ class Fraction:
 if __name__ == '__main__':
     f1 = Fraction(2, 3)
     f2 = Fraction(3, 8)
-    (f1 / f2).show_result()
+    print(f1 / f2)
