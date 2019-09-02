@@ -21,7 +21,7 @@ class Fraction:
         new_num = self.num * other_fraction.den + self.den * other_fraction.num
         new_den = self.den * other_fraction.den
         common_den = common_denominator(new_num, new_den)
-        return Fraction(new_num//common_den, new_den//common_den)
+        return Fraction(new_num // common_den, new_den // common_den)
 
     def __sub__(self, other_fraction):
         new_num = self.num * other_fraction.den - self.den * other_fraction.num
